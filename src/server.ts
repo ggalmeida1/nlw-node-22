@@ -8,6 +8,6 @@ app.use(cors())
 app.use(express.json());
 app.use(routes)
 
-app.listen(3334, () => {
-  console.log('listening on port 3334');
+app.listen(process.env.PORT || 3334, () => {
+  console.log('HTTP server running on port ' + process.env.PORT);
 })
